@@ -8,7 +8,7 @@ class NewVisitorTest(unittest.TestCase):
         binary = 'C:\\chromedriver_win32\\chromedriver.exe'
         self.browser = webdriver.Chrome(binary)
         self.browser.implicitly_wait(3)
-        # 암묵적 대기 기능 
+        # 암묵적 대기 기능
 
     def tearDown(self):
         self.browser.quit()
@@ -20,7 +20,7 @@ class NewVisitorTest(unittest.TestCase):
         self.browser.get('http://localhost:8000')
 
         # 웹 페이지 타이틀과 헤더가 'To-Do'를 표시하고 있다
-        self.assertIn('To-Do', self.browser.title)
+        self.assertIn('To-Do',self.browser.title)
         self.fail('Finish the test!')
         # 강제적으로 테스트 실패를 발생시켜 에러 메시지 출력, 테스트의 끝을 의미
 
